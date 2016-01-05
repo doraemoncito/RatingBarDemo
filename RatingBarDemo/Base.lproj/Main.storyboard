@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RatingBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qjv-sE-osc" customClass="RatingBar" customModule="RatingBar">
+                                <rect key="frame" x="21" y="28" width="558" height="93"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stars">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ratingChanged:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="dgC-9X-V5o"/>
+                                </connections>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KZx-QB-7IY">
+                                <rect key="frame" x="157" y="129" width="423" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="setNumberOfStars:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="g8h-bC-Cao"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of stars:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kr5-QZ-qr8">
+                                <rect key="frame" x="20" y="133" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="id8-yO-evp">
+                                <rect key="frame" x="157" y="167" width="423" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ML0-Ba-iXQ">
+                                <rect key="frame" x="20" y="171" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="id8-yO-evp" firstAttribute="width" secondItem="KZx-QB-7IY" secondAttribute="width" id="0K2-oz-0Ys"/>
+                            <constraint firstItem="ML0-Ba-iXQ" firstAttribute="width" secondItem="Kr5-QZ-qr8" secondAttribute="width" id="1ar-Dk-FQa"/>
+                            <constraint firstItem="qjv-sE-osc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Jj-by-DCz"/>
+                            <constraint firstItem="id8-yO-evp" firstAttribute="top" secondItem="KZx-QB-7IY" secondAttribute="bottom" constant="8" id="Exx-Rg-EQN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KZx-QB-7IY" secondAttribute="trailing" id="LU2-Xl-iF7"/>
+                            <constraint firstItem="id8-yO-evp" firstAttribute="height" secondItem="KZx-QB-7IY" secondAttribute="height" id="NXq-eI-i4H"/>
+                            <constraint firstItem="id8-yO-evp" firstAttribute="leading" secondItem="KZx-QB-7IY" secondAttribute="leading" id="RoP-er-8Z5"/>
+                            <constraint firstItem="id8-yO-evp" firstAttribute="centerY" secondItem="ML0-Ba-iXQ" secondAttribute="centerY" id="Svc-JX-LFX"/>
+                            <constraint firstItem="qjv-sE-osc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Tom-AF-EcZ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Kr5-QZ-qr8" secondAttribute="leading" id="ZNS-wm-1F0"/>
+                            <constraint firstItem="KZx-QB-7IY" firstAttribute="top" secondItem="qjv-sE-osc" secondAttribute="bottom" constant="8" id="cFP-HP-8CF"/>
+                            <constraint firstItem="qjv-sE-osc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="fLW-Bv-Ud8"/>
+                            <constraint firstItem="KZx-QB-7IY" firstAttribute="leading" secondItem="Kr5-QZ-qr8" secondAttribute="trailing" constant="8" id="oe1-lE-CXj"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="qjv-sE-osc" secondAttribute="trailing" constant="1" id="qdf-6V-WGj"/>
+                            <constraint firstItem="Kr5-QZ-qr8" firstAttribute="top" secondItem="qjv-sE-osc" secondAttribute="bottom" constant="12" id="uNF-6x-oMg"/>
+                            <constraint firstItem="id8-yO-evp" firstAttribute="leading" secondItem="ML0-Ba-iXQ" secondAttribute="trailing" constant="8" symbolic="YES" id="y9b-yg-nuU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rating" destination="id8-yO-evp" id="LGs-9b-IYq"/>
+                        <outlet property="ratingBar" destination="qjv-sE-osc" id="pvq-1k-eYh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>

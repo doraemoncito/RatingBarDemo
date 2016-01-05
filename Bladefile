@@ -1,0 +1,20 @@
+#
+# Uncomment below to specify your own resources.
+# See https://github.com/jondot/blade for more information.
+#
+
+blades:
+  - source: assets/images/appicon.png
+    template: assets/templates/app-icon.json
+    out: RatingBarDemo/Assets.xcassets/AppIcon.appiconset
+    contents: true
+
+  - source: assets/images/star-full.png
+    template: assets/templates/universal.json
+    out: RatingBar/Assets.xcassets/FullStar.imageset
+    contents: true
+
+  - source: assets/images/star-empty.png
+    template: assets/templates/universal.json
+    out: RatingBar/Assets.xcassets/EmptyStar.imageset
+    contents: true
